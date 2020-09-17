@@ -5,10 +5,18 @@ Within your desired environment you can just do:
 ```
 pip install git+https://github.com/<user>/<repo>.git@refs/pull/<123>/head
 ```
+
+
+[source](https://stackoverflow.com/questions/13561618/pip-how-to-install-a-git-pull-request)
+
 Values in `<>` need to be filled in by the user. For the xgcm case this would be:
+
 ```
 pip install git+https://github.com/xgcm/xgcm.git@refs/pull/205/head
+
 ```
+
+
 > This enables you to quickly test a new feature. If you want to make modifications and push back to github, I recommend the 'full' method below.
 
 ### The manual method
