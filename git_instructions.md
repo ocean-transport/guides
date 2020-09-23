@@ -43,4 +43,20 @@ And that should be it!
 
 ![](https://media.giphy.com/media/CjmvTCZf2U3p09Cn0h/giphy.gif)
 
+## Pick up somebody else PR and edit it
 
+Example illustrated with how I made edits to [xgcm/#205](https://github.com/xgcm/xgcm/pull/205) xgcm fork (replace values within `<>` appropriately
+
+1. Clone your own fork with `git clone git@github.com:<jbusecke>/<xgcm>.git` and navigate to the resulting folder.
+
+2. Add a remote for the PRs author (in this case `rabernat`) with `git remote add <rabernat> git@github.com:<rabernat>/<xgcm>.git`
+
+3. Fetch the other persons PR branch (here `vertical-grid`) and check out under any local name:
+```
+git fetch <rabernat>
+git checkout -b <what_you_want> <rabernat>/<vertical-grid>
+```
+
+4. Make some changes, add, commit. 
+
+5. Push back to the PR branch: `git push -u <rabernat> <what_you_want>:<vertical-grid>`
