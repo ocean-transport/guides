@@ -45,7 +45,7 @@ And that should be it!
 
 ## Pick up somebody else PR and edit it
 
-Example illustrated with how I made edits to [xgcm/#205](https://github.com/xgcm/xgcm/pull/205) xgcm fork (replace values within `<>` appropriately
+Example illustrated with how I made edits to [xgcm/#205](https://github.com/xgcm/xgcm/pull/205) xgcm fork (replace values within `<>` appropriately (e.g. replace `jbusecke` with your username and `xgcm` with the package you are working on).
 
 1. Clone your own fork with `git clone git@github.com:<jbusecke>/<xgcm>.git` and navigate to the resulting folder.
 
