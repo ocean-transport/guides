@@ -7,3 +7,11 @@ For now I will use it as a 'note-dump' with a loose structure below
 
 ## git
 Everything related to git/github workflows both online and local can be found [here](git_instructions.md)
+
+## Server/Cluster setups
+You can find tips and tutorials how to set up the scientific python stack here:
+- LDEO
+  - [Gyre](personalizing_conda_on_gyre_sverdrup.md)
+
+## Misc Tutorials
+You can find other tutorials that dont fit into the other categories [here](tutorials.md) 
