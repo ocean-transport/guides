@@ -8,7 +8,7 @@ accessing via terminal:
 
 This will bring you to a place where you have access to the a system wide python (`/usr/local/anaconda/bin/python`) and conda (`/usr/local/anaconda/bin/conda`), to install modules. 
 
-However, often when using gyre or sverdrup, the user will want to install python modules of their own choice and manage their own environments for their projects. 
+However, often when using gyre or sverdrup, the user will want to install python modules of their own choice and manage their own environments for their projects. Currently, gyre and sverrup are very fussy about this, and you need to includ a whole lot of specific package versions in your environment when you install it. These are listed in the example environment below. 
 
 **Step by step to create your own environment**:
 1. Create conda environment at command line 
