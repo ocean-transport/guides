@@ -10,8 +10,7 @@ Here is a solution, which we have used succesfully on habanero and pleiades. I a
 
 Miniconda is a mini version of Anaconda that includes just conda and its dependencies. It is a very small download. If you want to use python 3 (recommended) you can call
 
-    wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O
-miniconda.sh
+    wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
 
 ## Step 2: Run Miniconda3
 
@@ -60,7 +59,7 @@ The environment you created needs to be activated before you can actually use it
 
 ## Step 6: Boot up jupyterlab
 
-You can launch Jupyterlab via ssh tunneling. (I no longer have access to Gyre so if someone could check if the following procedures work on it, that'd be swell!!)
+You can launch Jupyterlab via ssh tunneling.
 
     - Boot up Jupyter lab without a browser: `jupyter lab --no-browser`. (You should get a message that the lab is running at `localhost:XXXX` where XXXX will be the remote port address.)
     - Now open a new Terminal window and ssh to that port using: `ssh -A -t -l <username>@gyre.ldeo.columbia.edu  -L YYYY:localhost:XXXX`. YYYY can be any available port on your local machine.
