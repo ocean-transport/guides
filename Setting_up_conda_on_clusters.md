@@ -3,7 +3,7 @@
 
 A problem that lots of us have to deal with is how to run our python code on a cluster (e.g. yellowstone, discover, habanero, etc.). On our local machine or on sverdrup, we know how to manage packages using [conda](https://docs.conda.io/en/latest/) and [pip](https://pypi.org/project/pip/). But most clusters do not have conda available, and the system or module-based python distribution probably doesn't have all the packages we need (e.g. xarray, dask, etc.). How can we get around these limitations to get a fully functional, flexible python environment on any cluster?
 
-Here is a solution, which we have used succesfully on habanero and pleiades. I assume something similar will work on most clusters.
+Here is a solution, which we have used succesfully on habanero and pleiades. We assume something similar will work on most clusters.
 
 
 ## Step 1: Install [miniconda](https://docs.conda.io/en/latest/miniconda.html) in user space.
@@ -40,7 +40,7 @@ You now have to define what packages you actually want to install. A good way to
 
 Create a similar file for your project and save it as `environment.yml`. You should chose a value of `name` that makes sense for your project.
 
-## Step 4: Creat the conda environment
+## Step 4: Create the conda environment
 
 You should now be able to run the following command
 
@@ -48,6 +48,8 @@ You should now be able to run the following command
      conda env create --file environmen.yml
 
 This will download and install all the packages and their dependencies.
+
+### <mark>It is occasionally the case where the security on the remote cluster will not allow one to install packages via conda. In that case, we recommend using [conda-pack](https://conda.github.io/conda-pack/) to install the environment. You can also find some tips [here](https://github.com/meom-group/tutos/blob/master/occigen/jupyter-notebook-on-occigen.md#how-to-run-a-jupyter-notebook-directly-on-occigen).</mark>
 
 ## Step 5: Activate the environments
 
