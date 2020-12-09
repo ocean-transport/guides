@@ -12,6 +12,7 @@ Everything related to git/github workflows both online and local can be found [h
 You can find tips and tutorials how to set up the scientific python stack here:
 - LDEO
   - [Gyre](personalizing_conda_on_gyre_sverdrup.md)
+- [Remote clusters](Setting_up_conda_on_clusters.md)
 
 ## Misc Tutorials
 You can find other tutorials that dont fit into the other categories [here](tutorials.md) 
