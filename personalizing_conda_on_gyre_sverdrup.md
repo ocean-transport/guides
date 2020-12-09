@@ -24,7 +24,7 @@ channels:
 dependencies:
   # These packages are required if you want your environment to show up in jupyterlab
   - python
-  -ipywidgets
+  - ipywidgets
   # Commonly used packaged by oceanographers
   - xarray
   - numpy
