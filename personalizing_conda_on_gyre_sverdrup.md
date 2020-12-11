@@ -42,7 +42,9 @@ dependencies:
 This is all you need to do. Now you can open notebooks that have access to this environment, as discussed next.
 
 **Opening a notebook with your environment**
-After you have created your own environment, you should be able to access it as kernel in your jupyter lab. You can do this by opening a notebook and then selecting your new Kernel from the dropdown in the top right. Your environment may take a minute or so to propagate to this dropdown after you install it. ![image of dropdown](https://i.imgur.com/ZVQbxpC.png)
+After you have created your own environment, you should be able to access it as kernel in your jupyter lab. You can do this by opening a notebook and then selecting your new Kernel from the dropdown in the top right. Your environment may take a minute or so to propagate to this dropdown after you install it. 
+
+![image of dropdown](https://i.imgur.com/ZVQbxpC.png)
 
 **Deleting Old Environments**
 You can delete you old environment by following: 
