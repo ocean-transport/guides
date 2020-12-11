@@ -22,48 +22,9 @@ name: users_env # can choose any name
 channels:
   - defaults
 dependencies:
-    # Needed to ensure gyre sets the right environment
-  - _libgcc_mutex=0.1=main
-  - backcall=0.2.0=py_0
-  - ca-certificates=2020.7.22=0
-  - certifi=2020.6.20=py37_0
-  - decorator=4.4.2=py_0
-  - ipykernel=5.3.4=py37h5ca1d4c_0
-  - ipython=7.18.1=py37h5ca1d4c_0
-  - ipython_genutils=0.2.0=py37_0
-  - jedi=0.17.2=py37_0
-  - jupyter_client=6.1.7=py_0
-  - jupyter_core=4.6.3=py37_0
-  - ld_impl_linux-64=2.33.1=h53a641e_7
-  - libedit=3.1.20191231=h14c3975_1
-  - libffi=3.3=he6710b0_2
-  - libgcc-ng=9.1.0=hdf63c60_0
-  - libsodium=1.0.18=h7b6447c_0
-  - libstdcxx-ng=9.1.0=hdf63c60_0
-  - ncurses=6.2=he6710b0_1
-  - openssl=1.1.1h=h7b6447c_0
-  - parso=0.7.0=py_0
-  - pexpect=4.8.0=py37_1
-  - pickleshare=0.7.5=py37_1001
-  - pip=20.2.2=py37_0
-  - prompt-toolkit=3.0.7=py_0
-  - ptyprocess=0.6.0=py37_0
-  - pygments=2.7.1=py_0
-  - python=3.7.9=h7579374_0
-  - python-dateutil=2.8.1=py_0
-  - pyzmq=19.0.2=py37he6710b0_1
-  - readline=8.0=h7b6447c_0
-  - setuptools=49.6.0=py37_1
-  - six=1.15.0=py_0
-  - sqlite=3.33.0=h62c20be_0
-  - tk=8.6.10=hbc83047_0
-  - tornado=6.0.4=py37h7b6447c_1
-  - traitlets=5.0.4=py_0
-  - wcwidth=0.2.5=py_0
-  - wheel=0.35.1=py_0
-  - xz=5.2.5=h7b6447c_0
-  - zeromq=4.3.2=he6710b0_3
-  - zlib=1.2.11=h7b6447c_3
+  # These packages are required if you want your environment to show up in jupyterlab
+  - python
+  - ipywidgets
   # Commonly used packaged by oceanographers
   - xarray
   - numpy
@@ -81,8 +42,9 @@ dependencies:
 This is all you need to do. Now you can open notebooks that have access to this environment, as discussed next.
 
 **Opening a notebook with your environment**
-After you have created your own environment, you should be able to access it as kernel in your jupyter lab. It will show up on your launcher: 
-![](https://i.imgur.com/v64ppy2.png)
+After you have created your own environment, you should be able to access it as kernel in your jupyter lab. You can do this by opening a notebook and then selecting your new Kernel from the dropdown in the top right. Your environment may take a minute or so to propagate to this dropdown after you install it. 
+
+![image of dropdown](https://i.imgur.com/ZVQbxpC.png)
 
 **Deleting Old Environments**
 You can delete you old environment by following: 
