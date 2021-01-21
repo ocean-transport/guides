@@ -13,6 +13,9 @@ You can find tips and tutorials how to set up the scientific python stack here:
 - [Remote clusters](Setting_up_conda_on_clusters.md)
   - LDEO
     - [Gyre](personalizing_conda_on_gyre_sverdrup.md)
+    
+## Conda
+You can find some tips and tricks how to configure and deal with [Conda](https://docs.conda.io/en/latest/) [here](conda_configuration.md)
 
 ## Misc Tutorials
 You can find other tutorials that dont fit into the other categories [here](tutorials.md) 
