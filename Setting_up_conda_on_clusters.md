@@ -70,7 +70,7 @@ You can launch Jupyterlab via ssh tunneling.
     
 ## Step X: Adding packages to environment later
 
-Sometimes we will need to add packages to the environment after it has already been created using the above steps. This can happen because we didn't know of some requirements we had early on or some new exciting packages got launched. One strategy in this case is to create a new environment, but this can often lead to a number of new environments and make things very confusing to keep track of. If possible, one can also update the environment from the enrionment file. This involves two steps:
+Sometimes we will need to add packages to the environment after it has already been created using the above steps. This can happen because we didn't know of some requirements we had early on or some new exciting packages got launched. One strategy in this case is to create a new environment, but this can often lead to a number of new environments and make things very confusing to keep track of. If possible, one can also update the environment from the environment file. This involves two steps:
 
     - Update the environment.yml file, adding new package names to it. 
     - run `conda env update -f environment.yml --prune` 
