@@ -66,3 +66,13 @@ You can launch Jupyterlab via ssh tunneling.
     - Boot up Jupyter lab without a browser: `jupyter lab --no-browser`. (You should get a message that the lab is running at `localhost:XXXX` where XXXX will be the remote port address.)
     - Now open a new Terminal window and ssh to that port using: `ssh -A -t -l <username>@gyre.ldeo.columbia.edu  -L YYYY:localhost:XXXX`. YYYY can be any available port on your local machine.
     - Open your browser and go to `localhost:YYYY`. Et voila, you have a working Jupyterlab.
+    
+    
+## Step X: Adding packages to environment later
+
+Sometimes we will need to add packages to the environment after it has already been created using the above steps. This can happen because we didn't know of some requirements we had early on or some new exciting packages got launched. One strategy in this case is to create a new environment, but this can often lead to a number of new environments and make things very confusing to keep track of. If possible, one can also update the environment from the environment file. This involves two steps:
+
+    - Update the environment.yml file, adding new package names to it. 
+    - run `conda env update -f environment.yml --prune` 
+
+If you just want to update the packages that are already there and maybe new versions are available, then use `conda update --all`.
