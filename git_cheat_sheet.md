@@ -1,6 +1,5 @@
 ### Creating & Copying Projects
-
-| Command   |      Description      |  
+| Command <img width=500/> |  Description <img width=500/>  |  
 |----------|-------------|
 | git init |  Initialize a local Git repository |
 | git clone ssh://git@github.com/[username]/[repository-name].git |    Create a local copy of a remote repository   |  
@@ -8,7 +7,7 @@
 _____________
 ### Basic Snapshotting
 
-| Command   |      Description      |  
+| Command <img width=500/>  |      Description  <img width=500/>    |  
 |----------|-------------|
 | git status | Check status |
 | git add [file-name.txt] | Add a file to the staging area | 
@@ -19,7 +18,7 @@ _____________
 ____________
 ### Branching & Merging
 
-| Command   |      Description      |  
+| Command  <img width=500/> |      Description   <img width=500/>   |  
 |----------|-------------|
 | git branch | List branches (the asterisk denotes the current branch) | 
 | git branch -a | List all branches (loca and remote) | 
@@ -39,7 +38,7 @@ ____________
 
 _______________
 ### Sharing & Updating Projects
-| Command   |      Description      |  
+| Command  <img width=500/> |      Description  <img width=500/>    |  
 |----------|-------------|
 | git push origin [branch name] | Push a branch to your remote repository | 
 | git push -u origin [branch name] | Push changes to remote repository (and remember the branch) | 
@@ -50,13 +49,13 @@ _______________
 | git remote add origin ssh://git@github.com/[username]/[repository-name].git | Add a remote repository | 
 | git remote set-url origin ssh://git@github.com/[username]/[repository-name].git | Set a repository's origin branch to SSH | 
 | git remote -v | Shows URL's of remote repository when listing your current remote connections | 
-| git remote add upstreatm https://github.com][origonal owner]/[origonal repository] | Specify a new remote upstream repo that will be synced with the fork | 
+| git remote add upstreatm `https://github.com` [origonal owner]/[origonal repository] | Specify a new remote upstream repo that will be synced with the fork | 
 | git fetch upstream | Sync a fork of a repository to keep it up-to-date with the upstream master repository | 
 | git rebase upstream/master | | Rewrite master to add any commits that are not already in upstream/master |
 
 ________________
 ### Inspection & Comparison
-| Command   |      Description      |  
+| Command  <img width=500/> |      Description  <img width=500/>    |  
 |----------|-------------|
 | git log | View changes | 
 | git log --summary | View changes (detailed) | 
@@ -66,3 +65,5 @@ ________________
 
 ____________
 *Adapted from David John Gagne, NCAR-CISL*
+
+
