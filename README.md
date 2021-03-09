@@ -6,7 +6,7 @@ This is still a very new repo and as it grows we need to think as a group of how
 For now I will use it as a 'note-dump' with a loose structure below
 
 ## git
-Everything related to git/github workflows both online and local can be found [here](git_instructions.md)
+Everything related to git/github workflows both online and local can be found [here](git_instructions.md), in addition to a helpful [cheat sheet](git-cheat-sheet.md) of common git commands.
 
 ## Server/Cluster setups
 You can find tips and tutorials how to set up the scientific python stack here:
