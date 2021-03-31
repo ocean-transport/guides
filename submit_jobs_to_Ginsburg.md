@@ -29,9 +29,6 @@ The example submit script runs the job ```Date```, which prints the time and dat
 #SBATCH --time=0-0:10            # The time the job will take to run in D-HH:MM
 #SBATCH --mem-per-cpu=5G         # The memory the job will use per cpu core
 
-export TMPDIR=/glade/scratch/$USER/temp
-mkdir -p $TMPDIR
-
 # Run program
 date
  
