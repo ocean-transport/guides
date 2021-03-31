@@ -158,3 +158,4 @@ You can access data on **Habanero** by navigating to the /rigel directory on Gin
 ### Still need help?
 - [Ginsburg HPC Cluster User Documentation](https://confluence.columbia.edu/confluence/display/rcs/Ginsburg+HPC+Cluster+User+Documentation)
 - hpc-support@columbia.edu
+- [Example of running Jupyter Notebooks on Hobanero](https://rabernat.github.io/research_computing/running-jupyter-notebooks-on-habanero.html)
