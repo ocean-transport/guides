@@ -91,7 +91,7 @@ If you are wanting to take advantage of the GPUs with TensorFlow, make sure you 
 *To see all available modules, you can just do a `module avail` from the command line.*
 
 ### Jupyter Notebooks
-Jupyter notebooks run on a semi-public port that is accessible to other users logged in to a submite not on Ginsburg. Therefore, it is strongly reccomended to set up a password using the following steps:
+Jupyter notebooks run on a semi-public port that is accessible to other users logged in to a submit node on Ginsburg. Therefore, it is strongly reccomended to set up a password using the following steps:
 1. load the anaconda python module
 ```bash
 $ module load anaconda
@@ -110,6 +110,25 @@ from notebook.auth import passwd; passwd()
 ```
 8. paste the hash password into `~/.jupyter/jupyter_notebook_config.py` with the line starting with `c.NotebookApp.password =`. Make sure this line is uncommented.
 
-#### Still need help?
+**Run a Jupyter Notebook**
+
+Start an interactive job. This example uses a time limit of one hour. 
+```bash
+$ srun --pty -t 0-01:00 -A <ACCOUNT> /bin/bash
+$ unset XDG_RUNTIME_DIR.                          # get ride of XDG_RUNTIME_DIR environment variable
+$ module load anaconda                            # load anaconda
+$ hostname -i                                     # This will print the IP of your interactive job node
+$ jupyter notebook --no-browser --ip=<IP>         # Start the jupyter notebook with your node IP
+```
+**SSH port forwarding**
+At this point, the port number of you notebook should be displayed. Open another connection to Ginsburg that forwards a local port to the remote node/port. For exampe:
+```bash
+$ ssh -L 8080:10.43.4.206:8888 UNI@burg.rcs.columbia.edu
+```
+where 8888 is the remote port number, 8080 is the local port, and 10.43.4.206 is the IP of the interactive job node.
+
+To see the notebook, navigate to a browser on your desktop and go to *localhost:8080*. 
+
+### Still need help?
 - [Ginsburg HPC Cluster User Documentation](https://confluence.columbia.edu/confluence/display/rcs/Ginsburg+HPC+Cluster+User+Documentation)
 - hpc-support@columbia.edu
