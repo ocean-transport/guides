@@ -1,7 +1,7 @@
 ## Ginsburg HPC Cluster 
 
 
-### Gain Access
+### Access
 To gain access to the cluster, you must first get approved by emailing your UNI to the CDS lab HPC laison, [Julius Busecke](mailto:julius@ldeo.columbia.edu). Any further inquiries about Ginsburg should be directed to hpc-support@columbia.edu.
 
 ### Log In
