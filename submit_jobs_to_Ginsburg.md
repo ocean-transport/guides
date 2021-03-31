@@ -5,7 +5,7 @@
 To gain access to the cluster, you must first get approved by emailing your UNI to the CDS lab HPC laison, [Julius Busecke](mailto:julius@ldeo.columbia.edu). Any further inquiries about Ginsburg should be directed to hpc-support@columbia.edu.
 
 ### Log In
-Log in to the secure [LDEO vpn](https://ldeo-it.ldeo.columbia.edu/content/vpn-virtual-private-network) with your LDEO username and password. From your terminal, SSH into the submit node: ```ssh <UNI>@ginsburg.rcs.columbia.edu```. Enter your Columbia password. 
+Log in to the secure [LDEO vpn](https://ldeo-it.ldeo.columbia.edu/content/vpn-virtual-private-network) with your LDEO username and password. From your terminal, SSH into the submit node: ```ssh <UNI>@ginsburg.rcs.columbia.edu```. Enter your Columbia password and you will be in your HOME directory. 
 
 ### Start a Job with Slurm
 
@@ -38,6 +38,18 @@ date
 Once saved, scripts like this one can be submitted  to the cluster:
 ```bash
 $ sbatch date.sh
+```
+To view your jobs on the system:
+```bash
+$ squeue -u <UNI>
+```
+To view information about a job:
+```bash
+$ scontrol show job [job ID]
+```
+To cancel a job:
+```bash
+$ scancel [job ID]
 ```
 
 ### Python 
@@ -80,12 +92,13 @@ If you are wanting to take advantage of the GPUs with TensorFlow, make sure you 
 
 ### Some useful modules
 
-| Name |  Command  |  
-|----------|-------------|
-| Anaconda | module load anaconda|  
-| NetCDF | module load netcdf/gcc/64/gcc/64/4.7.3 |
+| Name | Version  | Module  |  
+|----------|-------------|-------------|
+| Anaconda Python 3.8.5 2020.11 | Python 3.8.5 | module load anaconda/3-2020.11 |  
+| Anaconda Python  2.7.16 2019.10 | Python 2.7.16 | module load anaconda/2-2019.10 |  
+| netcdf/gcc | 4.7.4 | netcdf/gcc/64/gcc/64/4.7.4 |
 
-*To see all available modules, you can just do a `module avail` from the command line.*
+*To see all available modules already installed on the cluster, run `module avail` from the command line. [More moduile commands](https://lmod.readthedocs.io/en/latest/010_user.html).*
 
 ### Jupyter Notebooks
 Jupyter notebooks run on a semi-public port that is accessible to other users logged in to a submit node on Ginsburg. Therefore, it is strongly reccomended to set up a password using the following steps:
@@ -125,6 +138,21 @@ $ ssh -L 8080:10.43.4.206:8888 UNI@burg.rcs.columbia.edu
 where 8888 is the remote port number, 8080 is the local port, and 10.43.4.206 is the IP of the interactive job node.
 
 To see the notebook, navigate to a browser on your desktop and go to *localhost:8080*. 
+
+### Where do I save my files?
+Ginsburg has a shared storage server named "burg".
+
+| Location | Storage  | What to save  |  
+|----------|-------------|-------------|
+| /burg/home/<UNI> | 50 GB | small files, documents, source code, and scripts | 
+| /burg/abernathey | 1 TB | large data files !NOT BACKED UP! | 
+
+
+Transfer data to the cluster using SCP:
+```bash
+$ scp MyDataFile <UNI>@motion.rcs.columbia.edu:<DESTINATION_PATH>
+```
+You can access data on **Habanero** by navigating to the /rigel directory on Ginsburg's transfer or login node. 
 
 ### Still need help?
 - [Ginsburg HPC Cluster User Documentation](https://confluence.columbia.edu/confluence/display/rcs/Ginsburg+HPC+Cluster+User+Documentation)
