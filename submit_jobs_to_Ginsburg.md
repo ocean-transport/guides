@@ -86,7 +86,7 @@ Specify the OCP GPU partition in your submit script:
 
 ```
 
-If you are wanting to take advantage of the GPUs with TensorFlow, make sure you install the corect release:
+If you want to take advantage of the GPUs with TensorFlow, make sure you install the correct release:
 
 ```conda install tensorflow-gpu```
 
@@ -131,7 +131,8 @@ $ hostname -i                                     # This will print the IP of yo
 $ jupyter notebook --no-browser --ip=<IP>         # Start the jupyter notebook with your node IP
 ```
 **SSH port forwarding**
-At this point, the port number of you notebook should be displayed. Open another connection to Ginsburg that forwards a local port to the remote node/port. For exampe:
+
+At this point, the port number of you notebook should be displayed. Open another connection to Ginsburg that forwards a local port to the remote node/port. For example:
 ```bash
 $ ssh -L 8080:10.43.4.206:8888 UNI@burg.rcs.columbia.edu
 ```
