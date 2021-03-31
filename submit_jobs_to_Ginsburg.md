@@ -44,7 +44,7 @@ $ sbatch date.sh
 ```
 
 ### Python 
-In your script, load anaconda when running python files:
+An example script using anaconda:
 ```bash
 #!/bin/sh
 #
