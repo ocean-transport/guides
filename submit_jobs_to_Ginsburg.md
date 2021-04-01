@@ -2,10 +2,10 @@
 
 
 ### Access
-To gain access to the cluster, you must first get approved by emailing your UNI to the CDS lab HPC laison, [Julius Busecke](mailto:julius@ldeo.columbia.edu). Any further inquiries about Ginsburg should be directed to hpc-support@columbia.edu.
+To gain access to the cluster, you must first get approval by emailing your UNI and account name (Ocean Climate Physics: Abernathey) to [hpc-support@columbia.edu](hpc-support@columbia.edu) while also cc'ing Ryan.
 
 ### Log In
-Log in to the secure [LDEO vpn](https://ldeo-it.ldeo.columbia.edu/content/vpn-virtual-private-network) with your LDEO username and password. From your terminal, SSH into the submit node: ```ssh <UNI>@ginsburg.rcs.columbia.edu```. Enter your Columbia password and you will be in your HOME directory. 
+Log in to the secure [LDEO vpn](https://ldeo-it.ldeo.columbia.edu/content/vpn-virtual-private-network) with your LDEO username and password. From your terminal, SSH into the submit node: ```ssh -x <UNI>@ginsburg.rcs.columbia.edu``` ("-x" enables X11 forwarding). Enter your Columbia password and you will be in the directory ```/burg/home/<UNI>```. 
 
 ### Start a Job with Slurm
 
@@ -77,7 +77,7 @@ $ sbatch helloword.sh
 
 
 ### GPU 
-OCP (thats us!) owns 4 GPU servers with priority access and the ability to run up to 5 days jobs. If the OCP GPU servers are not available, Slurm will allocate non-OCP GPU nodes.
+OCP owns 4 GPU servers with priority access and the ability to run up to 5 days jobs. If the OCP GPU servers are not available, Slurm will allocate non-OCP GPU nodes.
 
 Specify the OCP GPU partition in your submit script:
 ```bash
@@ -98,7 +98,7 @@ If you want to take advantage of the GPUs with TensorFlow, make sure you install
 | Anaconda Python  2.7.16 2019.10 | Python 2.7.16 | module load anaconda/2-2019.10 |  
 | netcdf/gcc | 4.7.4 | netcdf/gcc/64/gcc/64/4.7.4 |
 
-*To see all available modules already installed on the cluster, run `module avail` from the command line. [More moduile commands](https://lmod.readthedocs.io/en/latest/010_user.html).*
+To see all available modules already installed on the cluster, run `module avail` from the command line. [More module commands](https://lmod.readthedocs.io/en/latest/010_user.html).
 
 ### Jupyter Notebooks
 Jupyter notebooks run on a semi-public port that is accessible to other users logged in to a submit node on Ginsburg. Therefore, it is strongly reccomended to set up a password using the following steps:
@@ -114,7 +114,7 @@ $ jupyter notebook --generate-config
 ```
 $ ipython
 ```
-6. generate a hash password. After you create your password a hash password will be displayed. Copy it. 
+6. generate a hashed password for web authentication. After you enter a unique password, a hashed password will be displayed. The string should be of the form ```type:salt:hashed-password```. Copy this password. 
 ```python
 from notebook.auth import passwd; passwd()
 ```
@@ -125,7 +125,7 @@ from notebook.auth import passwd; passwd()
 Start an interactive job. This example uses a time limit of one hour. 
 ```bash
 $ srun --pty -t 0-01:00 -A <ACCOUNT> /bin/bash
-$ unset XDG_RUNTIME_DIR.                          # get ride of XDG_RUNTIME_DIR environment variable
+$ unset XDG_RUNTIME_DIR                          # get ride of XDG_RUNTIME_DIR environment variable
 $ module load anaconda                            # load anaconda
 $ hostname -i                                     # This will print the IP of your interactive job node
 $ jupyter notebook --no-browser --ip=<IP>         # Start the jupyter notebook with your node IP
