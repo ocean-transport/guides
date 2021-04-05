@@ -107,7 +107,7 @@ Copy `mitgcmuv` along with input fields into the `run` directory (you can also u
 #SBATCH --exclusive                                 
 #SBATCH --time=00:10:00              # The time the job will take to run.
 #SBATCH --mail-type=ALL
-#SBATCH --mail-user=spencerj@ldeo.columbia.edu
+#SBATCH --mail-user=<your-email>
 
 mpirun -n 96 ./mitgcmuv
 
