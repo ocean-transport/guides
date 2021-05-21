@@ -109,6 +109,9 @@ Copy `mitgcmuv` along with input fields into the `run` directory (you can also u
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=<your-email>
 
+module load intel-parallel-studio/2020
+module load netcdf-fortran-intel/4.5.3
+
 mpirun -n 96 ./mitgcmuv
 
 # End of script
