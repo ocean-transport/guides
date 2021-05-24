@@ -13,11 +13,21 @@ For both the [pangeo cloud](https://pangeo.io/cloud.html#sign-up) and [coiled](h
 You will likely use pangeo cloud as your 'frontend', meaning the spot in the cloud where your jupyter notebook is running. You currently have the choice between two different deployments on Google Cloud or AWS. 
 Each of these has a 'staging' and a 'production' deployment, which differ in the versions that are available in the environment ('staging' has the more recent versions').
 
+
+Each of these has a 'staging' and a 'production' deployment, which differ in the versions that are available in the environment ('staging' has the more recent versions').
+
 You can choose your deployment on the [pangeo cloud federation repo](https://github.com/pangeo-data/pangeo-cloud-federation#clusters). 
 
 Choosing a cloud provider usually is a question of where your data lives. You always want to 'bring your compute to the data' so match the deployment to your dataset location of choice.
 
 > For coiled you currently should use AWS only!
+
+Once you decided you will have to start a `server`
+<img width="1366" alt="image" src="https://user-images.githubusercontent.com/14314623/119416244-393de600-bcc1-11eb-8403-433f406ff039.png">
+
+Most of the time you want to choose the server with the `pangeo-Notebook` installed 
+> For the google cloud deployments, you will be able to choose different resources for your cloud server
+Its usually faster to get a small or medium server (and since we will get the computing power via dask below), those are often enough here.
 
 
 ## Getting that Dask OOOMPF
