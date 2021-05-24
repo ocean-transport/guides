@@ -55,17 +55,20 @@ client
   - Just slightly more complicated setup:
 ```python
 import coiled
+from dask.distributed import Client
 # make sure to match the 
 coiled.create_software_environment(
-    name='pangeo-cloud-staging',
-    container='pangeo/pangeo-notebook:2021.05.04',   # matches Pangeo Cloud AWS staging cluster
+    name='pangeo-cloud',
+    container='pangeo/pangeo-notebook',   # matches Pangeo Cloud AWS staging cluster with latest image
+    # container='pangeo/pangeo-notebook:2021.05.04',   # matches Pangeo Cloud AWS staging cluster
     # container='pangeo/pangeo-notebook:2021.05.04',   # matches Pangeo Cloud AWS production cluster
 )
-cluster = coiled.Cluster(software="pangeo-cloud-staging")
-client = cluster.get_client()
+cluster = coiled.Cluster(software="pangeo-cloud")
+client = Client(cluster)
 client
 
-# check out 
+
+
 ```
   - Limited to AWS at the moment
   - It is super easy to set up custom environment on dask workers [example](https://github.com/jbusecke/cmip6_derived_cloud_datasets/blob/main/first_try.ipynb).
