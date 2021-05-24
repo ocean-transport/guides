@@ -18,7 +18,9 @@ You can find tips and tutorials how to set up the scientific python stack here:
 You can find some tips and tricks how to configure and deal with [Conda](https://docs.conda.io/en/latest/) [here](conda_configuration.md)
 
 ## Cloud
-You can find a guide how to set up a private cloud bucket on Google Cloud [here](cloud_storage.md).
+We are all about the cloud over here.
+- [Cloud Basics](cloud_workflow.md)
+- You can find a guide how to set up a private cloud bucket on Google Cloud [here](cloud_storage.md).
 
 ## Misc Tutorials
 You can find other tutorials that dont fit into the other categories [here](tutorials.md) 
