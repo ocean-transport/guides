@@ -7,7 +7,23 @@ To gain access to the cluster, you must first get approval by emailing your UNI 
 ### Log In
 Log in to the secure [LDEO vpn](https://ldeo-it.ldeo.columbia.edu/content/vpn-virtual-private-network) with your LDEO username and password. From your terminal, SSH into the submit node: ```ssh -x <UNI>@ginsburg.rcs.columbia.edu``` ("-x" enables X11 forwarding). Enter your Columbia password and you will be in the directory ```/burg/home/<UNI>```. 
 
-Alternately, you can log in direcly to the `burg` filesystem using ```ssh -x <UNI>@burg.rcs.columbia.edu```. This route is useful if you are working with virtual python environments on the `burg` filesystem, because it will allow you more RAM to work with. 
+Alternatively, you can define specific SSH settings that will make connecting to the host faster. In your local `.ssh/config` file, add the following information:
+```bash
+Host gins
+        HostName ginsburg.rcs.columbia.edu
+        ForwardAgent yes
+        User <UNI>
+        ServerAliveInterval 60
+```
+`ServerAliveInterval` helps keep your ssh connection alive if you have an unsteady internet. 
+
+Now logging in to Ginburg is a bit faster.
+```bash
+ssh -x gins
+```
+
+Note: Logging in direcly to the `burg` filesystem using ```ssh -x <UNI>@burg.rcs.columbia.edu``` allows you more RAM to work with. This route is useful if you are working with virtual python environments on the `burg` filesystem.
+
 
 ### Start a Job with Slurm
 
