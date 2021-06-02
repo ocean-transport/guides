@@ -22,6 +22,9 @@ Now logging in to Ginburg is a bit faster.
 ssh -x gins
 ```
 
+Note: Logging in direcly to the `burg` filesystem using ```ssh -x <UNI>@burg.rcs.columbia.edu``` allows you more RAM to work with. This route is useful if you are working with virtual python environments on the `burg` filesystem.
+
+
 ### Start a Job with Slurm
 
 Ginsburg uses [Slurm](https://slurm.schedmd.com/documentation.html) to manage the cluster workload. A batch script is used to allocate resources and execute your job. You must specify an account when you're ready to submit a job to the cluster. 
