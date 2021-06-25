@@ -3,8 +3,9 @@
 ### An even easier method
 Within your desired environment you can just do:
 ```
-pip install git+https://github.com/<user>/<repo>.git@refs/pull/<123>/head
+python -m pip install git+https://github.com/<user>/<repo>.git@refs/pull/<123>/head
 ```
+EDIT: Just using `pip` instead of `python -m pip` recently failed for me. Apparently it is [better practice](https://adamj.eu/tech/2020/02/25/use-python-m-pip-everywhere/) to use `python -m pip`. 
 
 
 [source](https://stackoverflow.com/questions/13561618/pip-how-to-install-a-git-pull-request)
@@ -12,7 +13,7 @@ pip install git+https://github.com/<user>/<repo>.git@refs/pull/<123>/head
 Values in `<>` need to be filled in by the user. For the xgcm case this would be:
 
 ```
-pip install git+https://github.com/xgcm/xgcm.git@refs/pull/205/head
+python -m pip install git+https://github.com/xgcm/xgcm.git@refs/pull/205/head
 
 ```
 
