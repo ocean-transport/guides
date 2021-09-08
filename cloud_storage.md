@@ -69,4 +69,4 @@ da.to_netcdf(f.name) # this could be any object, this example uses netCDF
 fs.put(f.name, '<bucketname>/something.nc') # same as fs.upload(...)
 open_f = fs.open('<bucketname>/something.nc')
 ds = xr.open_dataset(open_f)
-```
+``` 
