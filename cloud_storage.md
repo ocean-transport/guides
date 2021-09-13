@@ -23,20 +23,50 @@ The final step is to create a key for the service account. So return to the serv
 You can upload the key via drag and drop to your jupyterlab interface and then use it in your notebooks.
 > I am not sure this is a secure best practice, this will only affect the data within this bucket, so I will not worry too much about it. If you know a better way to do this, please let me know.
 
-### Writing/Reading with xarray
+## Instantiate a filesystem with your credentials
+
 ```python
 import json
 import gcsfs
 with open('/home/jovyan/keys/<keyname>.json') as token_file:
     token = json.load(token_file)
-gcs = gcsfs.GCSFileSystem(token=token)
-mapper = gcs.get_mapper('<bucketname>/something.zarr')
+fs = gcsfs.GCSFileSystem(token=token)
+```
 
+As anonymous
+
+```python
+fs = gcsfs.GCSFileSystem(anon=True)
+```
+
+AWS has its own variation for this.
+
+```python
+import s3fs
+
+fs = s3fs.S3FileSystem(key=, secret=)
+
+```
+
+### Working with the filesystem (e.g., Writing/Reading with xarray)
+This should give you an idea about how to read and write to the bucket using xarray. Zarr is preferred when working on the cloud.  
+
+```python
 import xarray as xr
 import numpy as np
+import tempfile
 
-xr.DataArray(np.random.rand(4)).to_dataset(name='data').to_zarr(mapper, mode='w')
+da = xr.DataArray(np.random.rand(4)).to_dataset(name='data')
 
-xr.open_zarr(mapper)
-```
-This should give you an idea about how to read and write to the bucket using xarray.
+# Write/Read Zarr
+mapper = gcs.get_mapper('<bucketname>/something.zarr')
+da.to_zarr(mapper, mode='w')
+da_zarr = xr.open_zarr(mapper)
+
+# Write/Read other data objects
+f = NamedTemporaryFile()
+da.to_netcdf(f.name) # this could be any object, this example uses netCDF
+fs.put(f.name, '<bucketname>/something.nc') # same as fs.upload(...)
+open_f = fs.open('<bucketname>/something.nc')
+ds = xr.open_dataset(open_f)
+``` 
