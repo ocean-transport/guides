@@ -6,14 +6,15 @@ All new group members should go through the following steps.
 
 - [ ] Review the group [participation guide](https://ocean-transport.github.io/guide.html) and make
       sure you understand your expectations.
-- [ ] Read [Ryan's blog post](https://github.com/ocean-transport/guides) on collaborationn with GitHub
+- [ ] Read [Ryan's blog post](https://github.com/ocean-transport/guides) on collaboration with GitHub
       to give you an idea of how we operate.
 
 ## Columbia and LDEO Admin Stuff
 
-- [ ] Confirm that you have a [working UNI](https://cuit.columbia.edu/cuit/manage-my-uni)
-- [ ] Confirm that you have a working LDEO email address
-- [ ] Introduce yourself via email to division administrator Jenny Lee (jennylee@ldeo.columbia.edu)
+- [ ] Confirm that you have a working [UNI](https://cuit.columbia.edu/cuit/manage-my-uni)
+- [ ] Confirm that you have a working LDEO account and email address.
+      If not contact LDEO IT (askit@ldeo.columbia.edu)
+- [ ] Introduce yourself via email to division administrator Jenny Lee (`jennylee@ldeo.columbia.edu`)
       and make sure you are on the correct department mailing lists. Your email should state
     - Your name and title
     - That you are working with me
@@ -23,8 +24,8 @@ All new group members should go through the following steps.
 
 - [ ] Email Ryan to remind him to grant you access to Gyre and Abyssal servers (email to LDEO IT)
 - [ ] Email Ryan to remind him to grant you access to Ginsburg HPC cluster (email to CUIT)
-- [ ] Sign up for [Pangeo Cloud](https://pangeo.io/cloud.html#sign-up)
 - [ ] Sign up for GitHub. Tell Ryan your username so you can be added to the `ocean-transport` org
+- [ ] Sign up for [Pangeo Cloud](https://pangeo.io/cloud.html#sign-up)
 - [ ] Ask Ryan invite you to the group slack
 
 ## Group Website and Calendar
@@ -39,10 +40,10 @@ All new group members should go through the following steps.
 - [ ] If you're new to Python, check out https://earth-env-data-science.github.io/
 - [ ] If you're new to Oceanography, check out https://rabernat.github.io/intro_to_physical_oceanography
 - [ ] For a deeper overview of our research, read Ryan's [review of Isopycnal Mixing](https://www.sciencedirect.com/science/article/pii/B9780128215128000165)
-
+- For concrete questions you can always use the slack workspace.
 ## Setting up your project
 
-- [ ] Create a new repo for youreslf in the `ocean-transport` GitHub org
+- [ ] Create a new repo for yourself in the `ocean-transport` GitHub org
 - [ ] Start logging your first TODO items as distinct GitHub issues
 
 ## Meetings
