@@ -12,13 +12,15 @@ All new group members should go through the following steps.
 ## Columbia and LDEO Admin Stuff
 
 - [ ] Confirm that you have a working [UNI](https://cuit.columbia.edu/cuit/manage-my-uni)
-- [ ] Confirm that you have a working LDEO account and email address.
-      If not contact LDEO IT (askit@ldeo.columbia.edu)
 - [ ] Introduce yourself via email to division administrator Jenny Lee (`jennylee@ldeo.columbia.edu`)
       and make sure you are on the correct department mailing lists. Your email should state
     - Your name and title
     - That you are working with me
     - The expected duration of your stay
+- [ ] Confirm that you have a working LDEO account and / or email address.
+      You will need this to access some servers.
+      If not contact LDEO IT (askit@ldeo.columbia.edu)
+
   
 ## Servers, Clusters, and Accounts
 
