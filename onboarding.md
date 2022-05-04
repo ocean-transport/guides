@@ -6,7 +6,7 @@ All new group members should go through the following steps.
 
 - [ ] Review the group [participation guide](https://ocean-transport.github.io/guide.html) and make
       sure you understand your expectations.
-- [ ] Read [Ryan's blog post](https://github.com/ocean-transport/guides) on collaboration with GitHub
+- [ ] Read [Ryan's blog post](https://rabernat.medium.com/scientific-collaboration-and-project-management-in-github-d74f2255ae5f) on collaboration with GitHub
       to give you an idea of how we operate.
 
 ## Columbia and LDEO Admin Stuff
