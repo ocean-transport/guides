@@ -12,7 +12,8 @@ Now you can create a bucket. The form that opens up will ask you a few things. Y
 Leave all other settings as the defaults.
 
 ## Create Service Account
-Go to `IAM & Admin` and create a new service account. For now you only need to give it a name and a description. Leave the other things like they are. Copy the generated email, which will be something like `name@pangeo-181919.iam.gserviceaccount.com`
+Go to `IAM & Admin` and create a new service account. For now you only need to give it a name and a description. Leave the other things like they are. Copy the generated email, which will be something like `name@pangeo-181919.iam.gserviceaccount.com`. 
+> I think there is a way to set permissions (the next step) directly here now, but I have not figured out how to do that.
 
 Now navigate back to your bucket, click the `Permissions` tab, add a member and past the email from above. Choose `Storage Admin` (you might have to search for it) as the Role.
 
