@@ -31,6 +31,7 @@ After being patient, the file `tensorflow.sif` should be available in the home f
 To request resources and have a Jupyter Notebook running on a computing node it is necessary to have a batch script under, for example, the name `batch_tflw_v100s.sh`.
 
 To create it run `vi batch_tflw_v100s.sh` and paste the below command text.
+
 <span style="color:red">**Important:**</span> Change `<UNI>` for your actual UNI on 3 different cases
 
 ```
@@ -89,12 +90,15 @@ Then, in a web browser you should be able to access the Jupyter Notebook by writ
 #### Sanity Checks
 
 - The requested GPU should support your TensorFlow notebook:
+
 ![](https://i.imgur.com/g9tzOiQ.png)
 
 - The python kernel should be the `Python 3 (ipykernel)`
+
 ![](https://i.imgur.com/CwTHtZk.png)
 
 - Which points to the following path:
+
 ![](https://i.imgur.com/Lz3N88g.png)
 
 ### Connecting to remote host (VSCode)
@@ -104,15 +108,19 @@ If you use Ginsburg on remote with VSCode, it is possible to connect to the allo
 Make sure Remote-SSH, Python and Jupyter extensions are installed on VSCode.
 
 1. Connect to Ginsburg.
+
 ![](https://i.imgur.com/AOg42HP.png)
 
 2. Open a Jupyter Notebook.
 
 3. Select the kernel on the top right under the gear wheel and then `Connect to a Jupyter Server`.
+
 ![](https://i.imgur.com/TsgtmZY.png)
 
 4. Introduce the URL (`http://g051:8888/`) and select the `Python 3 (ipykernel)`
+
 ![](https://i.imgur.com/DESVpce.png)
 
 5. Check for GPUs
+
 ![](https://i.imgur.com/XJp5IZd.png)
