@@ -25,6 +25,7 @@ dependencies:
   # These packages are required if you want your environment to show up in jupyterlab
   - python
   - ipywidgets
+  - ipykernel
   # Commonly used packaged by oceanographers
   - xarray
   - numpy
@@ -54,5 +55,7 @@ You can delete you old environment by following:
 ## FAQs
 - I am having trouble with opening and running notebooks, because I believe I have had my jupyter lab instance open for too long, and errors have cropped up. Can I restart it? 
     - Yes you can. You will need to go to the `Commands` tab on the left of the jupyter lab, then open `Launch Classic Notebook`. This will open a new window, where you should see a button that says `Control Panel` on the left. You can click it, followed by clicking `Stop My Server`. Now if you logout and login again, you will be on a fresh jupyter lab instance which will be working with the latest libraries on gyre in a fresh instance.
+- I created and activated a new environment, but I don't see it as an option in the kernel selector. What should I do?
+    - This likely means your `environment.yml` file does not include the `ipykernel` package. To add this package, follow the instructions in Step X of this guide: [Setting_up_conda_on_clusters.md](https://github.com/ocean-transport/guides/blob/master/Setting_up_conda_on_clusters.md#step-x-adding-packages-to-environment-later)
 - How can I look at the resource usage on Gyre? 
     - You can get an overview of resource usage using the netdata dashboard that can be accessed at: http://gyre.ldeo.columbia.edu:19999/
