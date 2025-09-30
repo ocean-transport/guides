@@ -45,7 +45,7 @@ Create a similar file for your project and save it as `environment.yml`. You sho
 You should now be able to run the following command
 
      source .bashrc
-     conda env create --file environmen.yml
+     conda env create --file environment.yml
 
 This will download and install all the packages and their dependencies.
 
